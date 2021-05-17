@@ -1,3 +1,5 @@
+# Configuration adjusted for @canbal's MP3DP build
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
