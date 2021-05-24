@@ -518,9 +518,10 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // MP3DP Titan Aero
-    #define DEFAULT_Kp 17.5
-    #define DEFAULT_Ki .15
-    #define DEFAULT_Kd 200
+    #define DEFAULT_Kp 7.5
+    #define DEFAULT_Ki 0.5
+    #define DEFAULT_Kd 125
+
   #endif
 #endif // PIDTEMP
 
