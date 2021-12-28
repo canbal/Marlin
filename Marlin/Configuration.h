@@ -608,9 +608,9 @@
       #define DEFAULT_Ki 0.60
       #define DEFAULT_Kd 70.50
     #elif ENABLED(MK2S_EXTRUDER)
-      #define  DEFAULT_Kp 40.925
-      #define  DEFAULT_Ki 4.875
-      #define  DEFAULT_Kd 86.085
+      #define  DEFAULT_Kp 20
+      #define  DEFAULT_Ki 0.4
+      #define  DEFAULT_Kd 50
     #else
       #define DEFAULT_Kp  22.20
       #define DEFAULT_Ki   1.08
@@ -1198,13 +1198,13 @@
 #define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (100*60)
+#define XY_PROBE_FEEDRATE (150*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_FEEDRATE_FAST (12*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 4)
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
 
 /**
  * Probe Activation Switch
@@ -1343,7 +1343,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
