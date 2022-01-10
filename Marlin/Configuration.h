@@ -542,7 +542,7 @@
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
-#define HEATER_0_MINTEMP   5
+#define HEATER_0_MINTEMP   15
 #define HEATER_1_MINTEMP   5
 #define HEATER_2_MINTEMP   5
 #define HEATER_3_MINTEMP   5
@@ -550,7 +550,7 @@
 #define HEATER_5_MINTEMP   5
 #define HEATER_6_MINTEMP   5
 #define HEATER_7_MINTEMP   5
-#define BED_MINTEMP        5
+#define BED_MINTEMP        15
 #define CHAMBER_MINTEMP    5
 
 // Above this temperature the heater will be switched off.
@@ -564,7 +564,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
+#define BED_MAXTEMP      130
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -573,8 +573,8 @@
  * (especially before PID tuning). Setting the target temperature too close to MAXTEMP guarantees
  * a MAXTEMP shutdown! Use these values to forbid temperatures being set too close to MAXTEMP.
  */
-#define HOTEND_OVERSHOOT 15   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
-#define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+#define HOTEND_OVERSHOOT  8   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+#define BED_OVERSHOOT     5   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
 
 //===========================================================================
@@ -601,21 +601,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define TITAN_AERO_EXTRUDER false
-    #define MK2S_EXTRUDER true
-    #if ENABLED(TITAN_AERO_EXTRUDER)
-      #define DEFAULT_Kp 13.05
-      #define DEFAULT_Ki 0.60
-      #define DEFAULT_Kd 70.50
-    #elif ENABLED(MK2S_EXTRUDER)
-      #define  DEFAULT_Kp 20
-      #define  DEFAULT_Ki 0.4
-      #define  DEFAULT_Kd 50
-    #else
-      #define DEFAULT_Kp  22.20
-      #define DEFAULT_Ki   1.08
-      #define DEFAULT_Kd 114.00
-    #endif
+    #define  DEFAULT_Kp 15.34
+    #define  DEFAULT_Ki 0.74
+    #define  DEFAULT_Kd 79.64
   #endif
 #endif // PIDTEMP
 
